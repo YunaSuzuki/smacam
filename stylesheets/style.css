@@ -1,0 +1,131 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.header {
+  position: relative;
+  background-image: url("../images/header-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media (max-width: 560px) {
+    .header {
+      height: 240px; }
+      .header .pc-view {
+        display: none; } }
+  @media (min-width: 561px) {
+    .header {
+      height: 400px; }
+      .header .sp-view {
+        display: none; } }
+  .header__buttons {
+    display: flex;
+    float: right;
+    padding: 16px;
+    color: #000; }
+    .header__buttons li {
+      display: block;
+      margin: 0 8px;
+      padding: 8px 16px; }
+      @media (min-width: 561px) {
+        .header__buttons li {
+          border: 1px #000 solid;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          border-radius: 4px; } }
+    .header__buttons #humburger-icon {
+      color: #fff;
+      font-size: 28px;
+      font-size: 1.75rem; }
+  .header__titlebox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; }
+    @media (max-width: 560px) {
+      .header__titlebox {
+        width: 70%;
+        height: 45%; } }
+    @media (min-width: 561px) {
+      .header__titlebox {
+        width: 55%;
+        height: 50%; } }
+    .header__titlebox__inner {
+      position: relative;
+      height: 100%; }
+  .header .textbox {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+    text-align: center; }
+    @media (max-width: 560px) {
+      .header .textbox {
+        font-size: 18px;
+        font-size: 1.125rem; } }
+    @media (min-width: 561px) {
+      .header .textbox {
+        font-size: 32px;
+        font-size: 2rem; } }
+    .header .textbox span {
+      margin: 0 16px; }
+      @media (max-width: 560px) {
+        .header .textbox span {
+          line-height: 66px; } }
+      @media (min-width: 561px) {
+        .header .textbox span {
+          line-height: 110px; } }
+  .header .topleft-box {
+    width: 55%;
+    height: 55%;
+    line-height: 200%; }
+    @media (max-width: 560px) {
+      .header .topleft-box {
+        width: 70%; } }
+    @media (min-width: 561px) {
+      .header .topleft-box {
+        width: 55%; } }
+  .header .rightbottom-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    line-height: 200%; }
+    @media (max-width: 560px) {
+      .header .rightbottom-box {
+        width: 70%; } }
+    @media (min-width: 561px) {
+      .header .rightbottom-box {
+        width: 55%; } }
+  .header .center-mark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 5px;
+    width: 20px;
+    height: 20px; }
+    .header .center-mark span {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: #fff; }
+    .header .center-mark #falling-right {
+      transform: rotate(-45deg); }
+    .header .center-mark #rising-right {
+      transform: rotate(45deg); }
+
+/*# sourceMappingURL=style.css.map */

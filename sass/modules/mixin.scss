@@ -1,0 +1,10 @@
+@mixin bg-config{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin fontsize($size: 24) {
+  font-size: $size + px;
+  font-size: ($size / 16) * 1rem;
+}

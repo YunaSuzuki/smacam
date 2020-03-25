@@ -1,0 +1,177 @@
+@import 'compass';
+@import 'modules/variables.scss';
+@import 'modules/mixin.scss';
+
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+//header
+.header{
+  position: relative;
+  background-image: url('../images/header-image.png');
+  @include bg-config;
+  
+  @media #{$sp-size}{
+    height: 240px;
+    
+    .pc-view{
+      display: none;
+    }
+  }
+  
+  @media #{$more-than-tb}{
+    height: 400px;
+    
+    .sp-view{
+      display: none;
+    }
+  }
+  
+  &__buttons{
+    display: flex;
+    float: right;
+    padding: 16px;
+    color: #000;
+    
+    li{
+      display: block;
+      margin: 0 8px;
+      padding: 8px 16px;
+      
+      @media #{$more-than-tb}{
+        border: 1px #000 solid;
+        @include border-radius(4px);
+      }
+    }
+    
+    #humburger-icon{
+      color: #fff;
+      @include fontsize(28);
+    }
+    
+  }
+  
+  
+  
+  &__titlebox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    @media #{$sp-size}{
+      width: 70%;
+      height: 45%;
+    }
+    
+    @media #{$more-than-tb}{
+      width: 55%;
+      height: 50%;
+    }
+    
+    &__inner{
+      position: relative;
+      height: 100%;
+    }
+  }
+  
+  .textbox{
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    font-family: $ja_font;
+    text-align: center;
+    
+    @media #{$sp-size}{
+      @include fontsize(18);
+    }
+    
+    @media #{$more-than-tb}{
+      @include fontsize(32);
+    }
+    
+    span{
+      margin: 0 16px;
+      @media #{$sp-size}{
+        line-height: 66px;
+      }
+      
+      @media #{$more-than-tb}{
+        line-height: 110px;
+      }
+    }
+  }
+  
+  .topleft-box{
+    width: 55%;
+    height: 55%;
+    line-height: 200%;
+    
+    @media #{$sp-size}{
+      width: 70%;
+    }
+    
+    @media #{$more-than-tb}{
+      width: 55%;
+    }
+    
+  }
+  
+  .rightbottom-box{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    line-height: 200%;
+    
+    @media #{$sp-size}{
+      width: 70%;
+    }
+    
+    @media #{$more-than-tb}{
+      width: 55%;
+    }
+  }
+  
+  .center-mark{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 5px;
+    width: 20px;
+    height: 20px;
+    
+    span{
+      display: block;
+      width: 20px;
+      height: 1px;
+      background-color: #fff;
+    }
+    
+    #falling-right{
+  
+      transform: rotate(-45deg);
+    }
+    
+    #rising-right{
+      transform: rotate(45deg);
+    }
+  }
+}

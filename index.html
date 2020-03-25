@@ -11,21 +11,26 @@
   </head>
   <body>
     <header class="header">
-      <ul class="header__buttons">
-        <li>新規登録</li>
-        <li>ログイン</li>
-      </ul>
+      <div class="clearfix">
+        <ul class="header__buttons pc-view">
+          <li>新規登録</li>
+          <li>ログイン</li>
+        </ul>
+        <div class="header__buttons sp-view">
+          <i class="fas fa-bars" id="humburger-icon"></i>
+        </div>
+      </div>
       <div class="header__titlebox">
         <div class="header__titlebox__inner">
-          <div class="topleft-box">
+          <div class="topleft-box textbox">
             <span>教えたい</span>
           </div>
-          <div class="rightbottom-box">
+          <div class="rightbottom-box textbox">
             <span>学びたい</span>
           </div>
           <div class="center-mark">
-            <span></span>
-            <span></span>
+            <span id="falling-right"></span>
+            <span id="rising-right"></span>
           </div>
         </div>
       </div>
