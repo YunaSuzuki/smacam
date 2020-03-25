@@ -273,6 +273,7 @@ p{
   padding: 40px 16px;
   background-color: #FFFBF2;
   font-family: $contents_font;
+  color: $text-color;
   
   @media #{$more-than-tb}{
     &__flexbox{
@@ -296,8 +297,24 @@ p{
   }
   
   @media #{$sp-size}{
+    height: 300px;
+    
+    .section__flexbox__left, .section__title, .section__link{
+      position: relative;
+      z-index: 2;
+    }
     .section__flexbox__right{
-      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      img{
+        width: 100%;
+        @include opacity(.2);
+        
+      }
     }
   }
   
@@ -323,6 +340,7 @@ p{
     }
     
     @media #{$sp-size}{
+      z-index: 2;
       top: -30px;
       width: 120px;
       height: 50px;
@@ -418,4 +436,3 @@ p{
     }
   }
 }
-

@@ -6,9 +6,10 @@ $more-than-tb: '(min-width: 561px)';
 $less-than-tb: '(max-width: 960px)';
 
 
-//font-color
+//color
 $blue: #182C98;
+$text-color: #0f2950;
 
 //font
 $ja_font: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
-$contents_font: YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+$contents_font: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";;
