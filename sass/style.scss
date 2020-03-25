@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a:link, a:active, a:hover, a:visited{
+  
+}
+
 ul{
   list-style: none;
   margin: 0;
@@ -27,6 +31,10 @@ p{
   font-family: YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
   font-weight: bold;
   @include fontsize(24);
+}
+
+.bold-text{
+  font-weight: bold;
 }
 
 #tutor-marker{
@@ -214,8 +222,14 @@ p{
 
 .section{
   padding-bottom: 48px;
+  
+  &__title{
+    text-align: center;
+    margin-bottom: 24px;
+  }
 }
 
+//about
 .about{
   &__title{
     text-align: center;
@@ -244,6 +258,82 @@ p{
   }
 }
 
-//section
+//tutor, students
+.section{
+  position: relative;
+  margin: 56px 0;
+  padding: 40px 16px;
+  background-color: #FFFBF2;
+  font-family: $contents_font;
+  
+  .bubble{
+    position: absolute;
+    top: -30px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: bold;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    @include border-radius(25px);
 
-//about
+    &__inner{
+      position: relative;
+      height: 100%;
+      
+      &:before{
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        border: 10px solid transparent;
+        z-index: 0;
+        
+      }
+    }
+  }
+  
+  #tutor-bubble{
+    left: -8px;
+    background-color: #FCC345;
+    
+    .bubble__inner:before{
+      right: 40px;
+      border-left: 20px solid #FCC345;
+      @include transform(rotate(60deg));
+    }
+  }
+  
+  #student-bubble{
+    right: -8px;
+    background-color: #06C8B6;
+    
+    .bubble__inner:before{
+      right: 20px;
+      border-right: 20px solid #06C8B6;
+      @include transform(rotate(-60deg));
+    }
+  }
+  
+  ul.section__lists{
+    margin-bottom: 40px;
+    
+    li{
+      margin: 16px 0;
+      
+      i{
+        color: #00A5FF;
+        margin-right: 4px;
+      }
+    }
+  }
+  
+  &__link{
+    text-align: right;
+    
+    a{
+      color: #202B65;
+    }
+  }
+}
+

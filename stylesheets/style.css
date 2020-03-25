@@ -22,6 +22,9 @@ p {
   font-size: 24px;
   font-size: 1.5rem; }
 
+.bold-text {
+  font-weight: bold; }
+
 #tutor-marker {
   background: linear-gradient(rgba(0, 0, 0, 0) 65%, #fcc345 65%); }
 
@@ -158,6 +161,9 @@ p {
 
 .section {
   padding-bottom: 48px; }
+  .section__title {
+    text-align: center;
+    margin-bottom: 24px; }
 
 .about__title {
   text-align: center; }
@@ -177,5 +183,65 @@ p {
   font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif; }
   .about__textbox p {
     text-align: center; }
+
+.section {
+  position: relative;
+  margin: 56px 0;
+  padding: 40px 16px;
+  background-color: #FFFBF2;
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif; }
+  .section .bubble {
+    position: absolute;
+    top: -30px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: bold;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px; }
+    .section .bubble__inner {
+      position: relative;
+      height: 100%; }
+      .section .bubble__inner:before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        border: 10px solid transparent;
+        z-index: 0; }
+  .section #tutor-bubble {
+    left: -8px;
+    background-color: #FCC345; }
+    .section #tutor-bubble .bubble__inner:before {
+      right: 40px;
+      border-left: 20px solid #FCC345;
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -webkit-transform: rotate(60deg);
+      transform: rotate(60deg); }
+  .section #student-bubble {
+    right: -8px;
+    background-color: #06C8B6; }
+    .section #student-bubble .bubble__inner:before {
+      right: 20px;
+      border-right: 20px solid #06C8B6;
+      -moz-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+      -webkit-transform: rotate(-60deg);
+      transform: rotate(-60deg); }
+  .section ul.section__lists {
+    margin-bottom: 40px; }
+    .section ul.section__lists li {
+      margin: 16px 0; }
+      .section ul.section__lists li i {
+        color: #00A5FF;
+        margin-right: 4px; }
+  .section__link {
+    text-align: right; }
+    .section__link a {
+      color: #202B65; }
 
 /*# sourceMappingURL=style.css.map */
