@@ -436,3 +436,54 @@ p{
     }
   }
 }
+
+//footer
+.footer{
+  background-color: #2F5480;
+  color: #fff;
+  text-align: center;
+  font-family: $contents-font;
+  
+  &__text{
+    @include fontsize(12);
+  }
+  
+  &__iconlists{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  
+  @media #{$sp-size}{
+    height: 120px;
+    
+    &__iconlists{
+      width: 80%;
+      margin-bottom: 24px;
+      padding: 16px 0;
+      text-align: center;
+      
+      li i{
+        margin-right: 4px;
+      }
+    }
+  }
+  @media #{$more-than-tb}{
+    height: 160px;
+    
+    &__iconlists{
+      width: 60%;
+      max-width: 480px;
+      margin-bottom: 40px;
+      padding: 32px 0;
+      text-align: center;
+      @include fontsize(18);
+      
+      li i{
+        margin-right: 8px;
+      }
+    }
+  }
+  
+  
+}

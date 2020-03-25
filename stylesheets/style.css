@@ -319,4 +319,40 @@ p {
     .section__link a {
       color: #202B65; }
 
+.footer {
+  background-color: #2F5480;
+  color: #fff;
+  text-align: center;
+  font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif"; }
+  .footer__text {
+    font-size: 12px;
+    font-size: 0.75rem; }
+  .footer__iconlists {
+    display: flex;
+    justify-content: space-between;
+    margin: auto; }
+  @media (max-width: 560px) {
+    .footer {
+      height: 120px; }
+      .footer__iconlists {
+        width: 80%;
+        margin-bottom: 24px;
+        padding: 16px 0;
+        text-align: center; }
+        .footer__iconlists li i {
+          margin-right: 4px; } }
+  @media (min-width: 561px) {
+    .footer {
+      height: 160px; }
+      .footer__iconlists {
+        width: 60%;
+        max-width: 480px;
+        margin-bottom: 40px;
+        padding: 32px 0;
+        text-align: center;
+        font-size: 18px;
+        font-size: 1.125rem; }
+        .footer__iconlists li i {
+          margin-right: 8px; } }
+
 /*# sourceMappingURL=style.css.map */
