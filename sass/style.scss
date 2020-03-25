@@ -226,6 +226,14 @@ p{
   &__title{
     text-align: center;
     margin-bottom: 24px;
+    
+    @media #{$sp-size}{
+      @include fontsize(18);
+    }
+    
+    @media #{$more-than-tb}{
+      @include fontsize(24);
+    }
   }
 }
 
@@ -261,22 +269,44 @@ p{
 //tutor, students
 .section{
   position: relative;
-  margin: 56px 0;
+  margin: 80px 0;
   padding: 40px 16px;
   background-color: #FFFBF2;
   font-family: $contents_font;
   
+  @media #{$more-than-tb}{
+    &__flexbox{
+      display: flex;
+      justify-content: center;
+      
+      &__left{
+        width: 50%;
+        margin-right: 24px;
+        padding-left: 24px;
+      }
+      
+      &__right{
+        width: 50%;
+        
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  @media #{$sp-size}{
+    .section__flexbox__right{
+      display: none;
+    }
+  }
+  
   .bubble{
     position: absolute;
-    top: -30px;
     padding: 0 16px;
     color: #fff;
     font-weight: bold;
-    width: 120px;
-    height: 50px;
-    line-height: 50px;
     text-align: center;
-    @include border-radius(25px);
 
     &__inner{
       position: relative;
@@ -291,6 +321,38 @@ p{
         
       }
     }
+    
+    @media #{$sp-size}{
+      top: -30px;
+      width: 120px;
+      height: 50px;
+      line-height: 50px;
+      @include border-radius(25px);
+      
+      &__inner{
+        &:before{
+          bottom: -15px;
+          border: 10px solid transparent;
+        }
+      }
+    }
+    
+    @media #{$more-than-tb}{
+      top: -80px;
+      margin-top: 24px;
+      width: 30%;
+      height: 100px;
+      line-height: 100px;
+      @include border-radius(50px);
+      @include fontsize(24);
+      
+      &__inner{
+        &:before{
+          bottom: -15px;
+          border: 10px solid transparent;
+        }
+      }
+    }
   }
   
   #tutor-bubble{
@@ -298,9 +360,16 @@ p{
     background-color: #FCC345;
     
     .bubble__inner:before{
-      right: 40px;
-      border-left: 20px solid #FCC345;
+      left: 40px;
       @include transform(rotate(60deg));
+      
+      @media #{$sp-size}{
+        border-left: 20px solid #FCC345;
+      }
+      
+      @media #{$more-than-tb}{
+        border-left: 30px solid #FCC345;
+      }
     }
   }
   
@@ -310,18 +379,27 @@ p{
     
     .bubble__inner:before{
       right: 20px;
-      border-right: 20px solid #06C8B6;
       @include transform(rotate(-60deg));
+      
+      @media #{$sp-size}{
+        border-right: 20px solid #06C8B6;
+      }
+      
+      @media #{$more-than-tb}{
+        border-right: 30px solid #06C8B6;
+      }
     }
   }
   
   ul.section__lists{
     margin-bottom: 40px;
+    @include fontsize(18);
     
     li{
       margin: 16px 0;
       
       i{
+        display: inline-block;
         color: #00A5FF;
         margin-right: 4px;
       }
@@ -330,6 +408,10 @@ p{
   
   &__link{
     text-align: right;
+    
+    @media #{$more-than-tb}{
+      margin-top: 32px;
+    }
     
     a{
       color: #202B65;

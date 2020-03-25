@@ -164,6 +164,14 @@ p {
   .section__title {
     text-align: center;
     margin-bottom: 24px; }
+    @media (max-width: 560px) {
+      .section__title {
+        font-size: 18px;
+        font-size: 1.125rem; } }
+    @media (min-width: 561px) {
+      .section__title {
+        font-size: 24px;
+        font-size: 1.5rem; } }
 
 .about__title {
   text-align: center; }
@@ -186,23 +194,31 @@ p {
 
 .section {
   position: relative;
-  margin: 56px 0;
+  margin: 80px 0;
   padding: 40px 16px;
   background-color: #FFFBF2;
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif; }
+  @media (min-width: 561px) {
+    .section__flexbox {
+      display: flex;
+      justify-content: center; }
+      .section__flexbox__left {
+        width: 50%;
+        margin-right: 24px;
+        padding-left: 24px; }
+      .section__flexbox__right {
+        width: 50%; }
+        .section__flexbox__right img {
+          width: 100%; } }
+  @media (max-width: 560px) {
+    .section .section__flexbox__right {
+      display: none; } }
   .section .bubble {
     position: absolute;
-    top: -30px;
     padding: 0 16px;
     color: #fff;
     font-weight: bold;
-    width: 120px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    border-radius: 25px; }
+    text-align: center; }
     .section .bubble__inner {
       position: relative;
       height: 100%; }
@@ -212,35 +228,78 @@ p {
         bottom: -15px;
         border: 10px solid transparent;
         z-index: 0; }
+    @media (max-width: 560px) {
+      .section .bubble {
+        top: -30px;
+        width: 120px;
+        height: 50px;
+        line-height: 50px;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px; }
+        .section .bubble__inner:before {
+          bottom: -15px;
+          border: 10px solid transparent; } }
+    @media (min-width: 561px) {
+      .section .bubble {
+        top: -80px;
+        margin-top: 24px;
+        width: 30%;
+        height: 100px;
+        line-height: 100px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        font-size: 24px;
+        font-size: 1.5rem; }
+        .section .bubble__inner:before {
+          bottom: -15px;
+          border: 10px solid transparent; } }
   .section #tutor-bubble {
     left: -8px;
     background-color: #FCC345; }
     .section #tutor-bubble .bubble__inner:before {
-      right: 40px;
-      border-left: 20px solid #FCC345;
+      left: 40px;
       -moz-transform: rotate(60deg);
       -ms-transform: rotate(60deg);
       -webkit-transform: rotate(60deg);
       transform: rotate(60deg); }
+      @media (max-width: 560px) {
+        .section #tutor-bubble .bubble__inner:before {
+          border-left: 20px solid #FCC345; } }
+      @media (min-width: 561px) {
+        .section #tutor-bubble .bubble__inner:before {
+          border-left: 30px solid #FCC345; } }
   .section #student-bubble {
     right: -8px;
     background-color: #06C8B6; }
     .section #student-bubble .bubble__inner:before {
       right: 20px;
-      border-right: 20px solid #06C8B6;
       -moz-transform: rotate(-60deg);
       -ms-transform: rotate(-60deg);
       -webkit-transform: rotate(-60deg);
       transform: rotate(-60deg); }
+      @media (max-width: 560px) {
+        .section #student-bubble .bubble__inner:before {
+          border-right: 20px solid #06C8B6; } }
+      @media (min-width: 561px) {
+        .section #student-bubble .bubble__inner:before {
+          border-right: 30px solid #06C8B6; } }
   .section ul.section__lists {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-size: 1.125rem; }
     .section ul.section__lists li {
       margin: 16px 0; }
       .section ul.section__lists li i {
+        display: inline-block;
         color: #00A5FF;
         margin-right: 4px; }
   .section__link {
     text-align: right; }
+    @media (min-width: 561px) {
+      .section__link {
+        margin-top: 32px; } }
     .section__link a {
       color: #202B65; }
 
