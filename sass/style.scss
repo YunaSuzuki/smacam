@@ -12,10 +12,29 @@ ul{
   padding: 0;
 }
 
+p{
+  margin: 0;
+}
+
 .clearfix:after{
   display: block;
   content: '';
   clear: both;
+}
+
+.deco-text{
+  color: $blue;
+  font-family: YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  font-weight: bold;
+  @include fontsize(24);
+}
+
+#tutor-marker{
+  background: linear-gradient(transparent 65%, #FCC345 65%);
+}
+
+#student-marker{
+  background: linear-gradient(transparent 65%, #06C8B6 65%);
 }
 
 //header
@@ -175,3 +194,56 @@ ul{
     }
   }
 }
+
+//main
+.main-wrapper{
+  @media #{$sp-size}{
+    padding: 24px 16px;
+  }
+  
+  @media #{$tb-size}{
+    padding: 56px;
+  }
+  
+  @media #{$pc-size}{
+    padding: 56px;
+    max-width: 1024px;
+    margin: auto;
+  }
+}
+
+.section{
+  padding-bottom: 48px;
+}
+
+.about{
+  &__title{
+    text-align: center;
+    @media #{$sp-size}{
+      margin-bottom: 24px;
+    }
+    @media #{$more-than-tb}{
+      margin-bottom: 48px;
+    }
+    
+    img{
+      height: 24px;
+      transform: rotate(15deg);
+    }
+  
+  }
+  
+  &__textbox{
+    @include fontsize(16);
+    line-height: 24px;
+    font-family: $ja_font;
+    
+    p{
+      text-align: center;
+    }
+  }
+}
+
+//section
+
+//about

@@ -7,10 +7,26 @@ ul {
   margin: 0;
   padding: 0; }
 
+p {
+  margin: 0; }
+
 .clearfix:after {
   display: block;
   content: '';
   clear: both; }
+
+.deco-text {
+  color: #182C98;
+  font-family: YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+#tutor-marker {
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #fcc345 65%); }
+
+#student-marker {
+  background: linear-gradient(rgba(0, 0, 0, 0) 65%, #06c8b6 65%); }
 
 .header {
   position: relative;
@@ -127,5 +143,39 @@ ul {
       transform: rotate(-45deg); }
     .header .center-mark #rising-right {
       transform: rotate(45deg); }
+
+@media (max-width: 560px) {
+  .main-wrapper {
+    padding: 24px 16px; } }
+@media (min-width: 561px) and (max-width: 960px) {
+  .main-wrapper {
+    padding: 56px; } }
+@media (min-width: 961px) {
+  .main-wrapper {
+    padding: 56px;
+    max-width: 1024px;
+    margin: auto; } }
+
+.section {
+  padding-bottom: 48px; }
+
+.about__title {
+  text-align: center; }
+  @media (max-width: 560px) {
+    .about__title {
+      margin-bottom: 24px; } }
+  @media (min-width: 561px) {
+    .about__title {
+      margin-bottom: 48px; } }
+  .about__title img {
+    height: 24px;
+    transform: rotate(15deg); }
+.about__textbox {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+  font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif; }
+  .about__textbox p {
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
