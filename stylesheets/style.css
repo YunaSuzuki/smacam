@@ -25,6 +25,10 @@ p {
 .bold-text {
   font-weight: bold; }
 
+.normal-text {
+  font-size: 16px;
+  font-size: 1rem; }
+
 #tutor-marker {
   background: linear-gradient(rgba(0, 0, 0, 0) 65%, #fcc345 65%); }
 
@@ -163,7 +167,8 @@ p {
   padding-bottom: 48px; }
   .section__title {
     text-align: center;
-    margin-bottom: 24px; }
+    margin-bottom: 24px;
+    color: #000; }
     @media (max-width: 560px) {
       .section__title {
         font-size: 18px;
@@ -212,22 +217,20 @@ p {
         .section__flexbox__right img {
           width: 100%; } }
   @media (max-width: 560px) {
-    .section {
-      height: 300px; }
-      .section .section__flexbox__left, .section .section__title, .section .section__link {
-        position: relative;
-        z-index: 2; }
-      .section .section__flexbox__right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1; }
-        .section .section__flexbox__right img {
-          width: 100%;
-          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-          opacity: 0.2; } }
+    .section .section__flexbox__left, .section .section__title, .section .section__link {
+      position: relative;
+      z-index: 2; }
+    .section .section__flexbox__right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1; }
+      .section .section__flexbox__right img {
+        width: 100%;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+        opacity: 0.2; } }
   .section .bubble {
     position: absolute;
     padding: 0 16px;
@@ -354,5 +357,29 @@ p {
         font-size: 1.125rem; }
         .footer__iconlists li i {
           margin-right: 8px; } }
+
+@media (min-width: 561px) {
+  .income__wrapper {
+    display: flex;
+    justify-content: space-between; } }
+.income__wrapper__block {
+  margin-bottom: 24px; }
+  @media (min-width: 561px) {
+    .income__wrapper__block {
+      width: 49%; } }
+  .income__wrapper__block__imagebox {
+    width: 100%;
+    height: auto; }
+  .income__wrapper__block__textbox {
+    padding: 16px 0;
+    color: #000;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-size: 0.75rem; }
+    .income__wrapper__block__textbox .total {
+      margin-left: 4px;
+      font-size: 18px;
+      font-size: 1.125rem; }
 
 /*# sourceMappingURL=style.css.map */

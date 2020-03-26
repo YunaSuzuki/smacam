@@ -37,6 +37,10 @@ p{
   font-weight: bold;
 }
 
+.normal-text{
+  @include fontsize(16);
+}
+
 #tutor-marker{
   background: linear-gradient(transparent 65%, #FCC345 65%);
 }
@@ -226,6 +230,7 @@ p{
   &__title{
     text-align: center;
     margin-bottom: 24px;
+    color: #000;
     
     @media #{$sp-size}{
       @include fontsize(18);
@@ -297,7 +302,6 @@ p{
   }
   
   @media #{$sp-size}{
-    height: 300px;
     
     .section__flexbox__left, .section__title, .section__link{
       position: relative;
@@ -486,4 +490,40 @@ p{
   }
   
   
+}
+
+//tutor.html
+.income{
+  &__wrapper{
+    @media #{$more-than-tb}{
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    &__block{
+      @media #{$more-than-tb}{
+        width: 49%;
+      }
+      
+      margin-bottom: 24px;
+      
+      &__imagebox{
+        width: 100%;
+        height: auto;
+      }
+      
+      &__textbox{
+        padding: 16px 0;
+        color: #000;
+        line-height: 20px;
+        letter-spacing: 1px;
+        @include fontsize(12);
+        
+        .total{
+          margin-left: 4px;
+          @include fontsize(18);
+        }
+      }
+    }
+  }
 }
