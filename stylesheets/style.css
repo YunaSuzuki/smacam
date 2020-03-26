@@ -199,38 +199,41 @@ p {
 
 .section {
   position: relative;
-  margin: 80px 0;
   padding: 40px 16px;
   background-color: #FFFBF2;
   font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
   color: #0f2950; }
   @media (min-width: 561px) {
-    .section__flexbox {
-      display: flex;
-      justify-content: center; }
-      .section__flexbox__left {
-        width: 50%;
-        margin-right: 24px;
-        padding-left: 24px; }
-      .section__flexbox__right {
-        width: 50%; }
-        .section__flexbox__right img {
-          width: 100%; } }
+    .section {
+      margin: 80px 0; }
+      .section__flexbox {
+        display: flex;
+        justify-content: center; }
+        .section__flexbox__left {
+          width: 50%;
+          margin-right: 24px;
+          padding-left: 24px; }
+        .section__flexbox__right {
+          width: 50%; }
+          .section__flexbox__right img {
+            width: 100%; } }
   @media (max-width: 560px) {
-    .section .section__flexbox__left, .section .section__title, .section .section__link {
-      position: relative;
-      z-index: 2; }
-    .section .section__flexbox__right {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1; }
-      .section .section__flexbox__right img {
-        width: 100%;
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-        opacity: 0.2; } }
+    .section {
+      margin: 56px 0; }
+      .section .section__flexbox__left, .section .section__title, .section .section__link {
+        position: relative;
+        z-index: 2; }
+      .section .section__flexbox__right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1; }
+        .section .section__flexbox__right img {
+          width: 100%;
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+          opacity: 0.2; } }
   .section .bubble {
     position: absolute;
     padding: 0 16px;
@@ -381,5 +384,16 @@ p {
       margin-left: 4px;
       font-size: 18px;
       font-size: 1.125rem; }
+
+.register__button {
+  text-align: center; }
+  .register__button a {
+    padding: 16px 24px;
+    background-color: #FCC345;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */
