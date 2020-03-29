@@ -10,96 +10,110 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <div class="clearfix">
-        <ul class="header__buttons pc-view">
+    <div class="wrapper">
+      <header class="header">
+        <div class="clearfix">
+          <ul class="header__buttons pc-view">
+            <li>新規登録</li>
+            <li>ログイン</li>
+          </ul>
+          <div class="header__buttons sp-view">
+            <i class="fas fa-bars" id="humburger-icon"></i>
+          </div>
+        </div>
+        <div class="header__titlebox">
+          <div class="header__titlebox__inner">
+            <div class="topleft-box textbox">
+              <span>教えたい</span>
+            </div>
+            <div class="rightbottom-box textbox">
+              <span>学びたい</span>
+            </div>
+            <div class="center-mark">
+              <span id="falling-right"></span>
+              <span id="rising-right"></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <input type="checkbox" id="checkbox"/>
+      <label for="checkbox" class="humburger-icon">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </label>
+      <div class="humburger-menu">
+        <ul class="humburger-menu__lists">
           <li>新規登録</li>
           <li>ログイン</li>
         </ul>
-        <div class="header__buttons sp-view">
-          <i class="fas fa-bars" id="humburger-icon"></i>
+      </div>
+      <main class="main">
+        <div class="main-wrapper">
+          <section class="about">
+            <div class="about__title section__title">
+              <span class="about__title__textbox"><span class="deco-text">スマcam</span>とは</span>
+              <img src="images/question.png" alt="question">
+            </div>
+            <div class="about__textbox">
+              <p><span id="tutor-marker">得意を教えたい講師</span>と<span id="student-marker">学びたい生徒</span>を繋げるマッチングサービスアプリです。</p>
+              <p>教えたい人は、自分の得意を活かせ、</p>
+              <p>学びたい人は効率よく自分の苦手克服や得意を伸ばせます。</p>
+            </div>
+          </section>
+          <section class="section tutor">
+            <div class="bubble" id="tutor-bubble">
+              <div class="bubble__inner">
+                教えたい
+              </div>
+            </div>
+            <div class="section__title">こんな方に<span class="bold-text">オススメ</span></div>
+            <div class="section__flexbox">
+              <ul class="section__lists section__flexbox__left">
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>教えるのが好き</li>
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>自分の得意を活かしたい</li>
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>自分のレベルに合った生徒を教えたい</li>
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>好きな時間に働きたい</li>
+              </ul>
+              <div class="section__flexbox__right">
+                <img src="images/tutor.png" alt="tutor"></img>
+              </div>
+            </div>
+            <div class="section__link">
+              <a href="tutor.html">講師をご希望の方はコチラ</a>
+            </div>
+          </section>
+          <section class="section student">
+            <div class="bubble" id="student-bubble">
+              <div class="bubble__inner">
+                学びたい
+              </div>
+            </div>
+            <div class="section__title">こんな方に<span class="bold-text">オススメ</span></div>
+            <div class="section__flexbox">
+              <ul class="section__lists section__flexbox__left">
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>苦手をなくしたい</li>
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>得意をさらに伸ばしたい！</li>
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>自分に合った先生を選びたい</li>
+                <li class="section__lists__row"><i class="fas fa-check-circle"></i>都合に合わせて学習したい</li>
+              </ul>
+              <div class="section__flexbox__right">
+                <img src="images/student.png" alt="student"></img>
+              </div>
+            </div>
+            <div class="section__link">
+              <a href="student.html">入部をご希望の方はコチラ</a></div>
+          </section>
         </div>
-      </div>
-      <div class="header__titlebox">
-        <div class="header__titlebox__inner">
-          <div class="topleft-box textbox">
-            <span>教えたい</span>
-          </div>
-          <div class="rightbottom-box textbox">
-            <span>学びたい</span>
-          </div>
-          <div class="center-mark">
-            <span id="falling-right"></span>
-            <span id="rising-right"></span>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="main-wrapper">
-        <section class="about">
-          <div class="about__title section__title">
-            <span class="about__title__textbox"><span class="deco-text">スマcam</span>とは</span>
-            <img src="images/question.png" alt="question">
-          </div>
-          <div class="about__textbox">
-            <p><span id="tutor-marker">得意を教えたい講師</span>と<span id="student-marker">学びたい生徒</span>を繋げるマッチングサービスアプリです。</p>
-            <p>教えたい人は、自分の得意を活かせ、</p>
-            <p>学びたい人は効率よく自分の苦手克服や得意を伸ばせます。</p>
-          </div>
-        </section>
-        <section class="section tutor">
-          <div class="bubble" id="tutor-bubble">
-            <div class="bubble__inner">
-              教えたい
-            </div>
-          </div>
-          <div class="section__title">こんな方に<span class="bold-text">オススメ</span></div>
-          <div class="section__flexbox">
-            <ul class="section__lists section__flexbox__left">
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>教えるのが好き</li>
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>自分の得意を活かしたい</li>
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>自分のレベルに合った生徒を教えたい</li>
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>好きな時間に働きたい</li>
-            </ul>
-            <div class="section__flexbox__right">
-              <img src="images/tutor.png" alt="tutor"></img>
-            </div>
-          </div>
-          <div class="section__link">
-            <a href="tutor.html">講師をご希望の方はコチラ</a>
-          </div>
-        </section>
-        <section class="section student">
-          <div class="bubble" id="student-bubble">
-            <div class="bubble__inner">
-              学びたい
-            </div>
-          </div>
-          <div class="section__title">こんな方に<span class="bold-text">オススメ</span></div>
-          <div class="section__flexbox">
-            <ul class="section__lists section__flexbox__left">
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>苦手をなくしたい</li>
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>得意をさらに伸ばしたい！</li>
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>自分に合った先生を選びたい</li>
-              <li class="section__lists__row"><i class="fas fa-check-circle"></i>都合に合わせて学習したい</li>
-            </ul>
-            <div class="section__flexbox__right">
-              <img src="images/student.png" alt="student"></img>
-            </div>
-          </div>
-          <div class="section__link">
-            <a href="student.html">入部をご希望の方はコチラ</a></div>
-        </section>
-      </div>
-    </main>
-    <footer class="footer">
-      <ul class="footer__iconlists">
-        <li><i class="fab fa-twitter"></i>twitter</li>
-        <li><i class="fab fa-facebook-f"></i>facebook</li>
-        <li><i class="fab fa-instagram"></i>instagram</li>
-      </ul>
-      <span class="footer__text">All rights reserved.</span>
-    </footer>
+      </main>
+      <footer class="footer">
+        <ul class="footer__iconlists">
+          <li><i class="fab fa-twitter"></i>twitter</li>
+          <li><i class="fab fa-facebook-f"></i>facebook</li>
+          <li><i class="fab fa-instagram"></i>instagram</li>
+        </ul>
+        <span class="footer__text">All rights reserved.</span>
+      </footer>
+    </div>
   </body>
 </html>

@@ -72,31 +72,30 @@ p{
   }
   
   &__buttons{
-    display: flex;
-    float: right;
-    padding: 16px;
-    color: #000;
-    
-    li{
-      display: block;
-      margin: 0 8px;
-      padding: 8px 16px;
+    @media #{$pc-size}{
+      display: flex;
+      float: right;
+      padding: 16px;
+      color: #000;
       
-      @media #{$more-than-tb}{
-        border: 1px #000 solid;
-        @include border-radius(4px);
+      li{
+        display: block;
+        margin: 0 8px;
+        padding: 8px 16px;
+        
+        @media #{$more-than-tb}{
+          border: 1px #000 solid;
+          @include border-radius(4px);
+        }
       }
     }
     
-    #humburger-icon{
-      color: #fff;
-      @include fontsize(28);
+    @media #{$less-than-tb}{
+      display: none;
     }
     
   }
-  
-  
-  
+
   &__titlebox{
     position: absolute;
     top: 0;
@@ -592,4 +591,108 @@ p{
     @include fontsize(24);
   }
   
+}
+
+//humburger-menu
+#checkbox{
+  display: none;
+}
+
+@media #{$pc-size}{
+  .humburger-menu{
+    display: none;
+  }
+}
+
+@media #{$less-than-tb}{
+  
+  .humburger-icon{
+    position: fixed;
+    top: 24px;
+    left: 16px;
+    z-index: 3;
+    
+    .bar{
+      display: block;
+      background-color: #fff;
+      width: 30px;
+      height: 3px;
+      margin: 5px auto;
+    }
+    
+    .top, .bottom{
+      @include transform(rotateZ(0deg));
+      @include transition(background-color 1s linear);
+    }
+    
+    .middle{
+      @include transition(width 1s linear);
+    }
+  }
+  
+  .humburger-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    background-color: #FCC345;
+    z-index: 2;
+    color: #fff;
+    @include opacity(0);
+    @include transition(width 1s linear, height 1s linear, opacity 1s linear);
+    
+    &__lists{
+      @include opacity(0);
+      
+      @media #{$sp-size}{
+        margin: 80px 0 0 16px;
+      }
+      
+      @media #{$tb-size}{
+        margin: 32px 48px 0;
+        text-align: center;
+      }
+      
+      li{
+        margin-bottom: 16px;
+      }
+    }
+  }
+  
+  .wrapper{
+    position: relative;
+  }
+  
+  .header, .main, .footer{
+    z-index: 1;
+  }
+}
+
+//humburger-menu表示時のアニメーション
+input[type="checkbox"]:checked ~ .humburger-menu{
+  @include transition(width 1s linear, height 1s linear, opacity 1s linear);
+  width: 100vw;
+  height: 200px;
+  @include opacity(1);
+}
+
+input[type="checkbox"]:checked ~ label .top{
+  @include transform(rotateZ(45deg));
+  @include transition(transform 1s linear);
+}
+input[type="checkbox"]:checked ~ label .bottom{
+  @include transform(translateY(-15px) rotateZ(-45deg));
+  @include transition(transform 1s linear);
+}
+
+input[type="checkbox"]:checked ~ label .middle{
+  width: 0;
+  @include transition(width 0.5s linear);
+}
+
+input[type="checkbox"]:checked ~ .humburger-menu ul{
+  @include opacity(1);
+  @include transition(opacity 1s ease-in);
 }

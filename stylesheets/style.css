@@ -51,25 +51,26 @@ p {
       height: 400px; }
       .header .sp-view {
         display: none; } }
-  .header__buttons {
-    display: flex;
-    float: right;
-    padding: 16px;
-    color: #000; }
-    .header__buttons li {
-      display: block;
-      margin: 0 8px;
-      padding: 8px 16px; }
-      @media (min-width: 561px) {
-        .header__buttons li {
-          border: 1px #000 solid;
-          -moz-border-radius: 4px;
-          -webkit-border-radius: 4px;
-          border-radius: 4px; } }
-    .header__buttons #humburger-icon {
-      color: #fff;
-      font-size: 28px;
-      font-size: 1.75rem; }
+  @media (min-width: 961px) {
+    .header__buttons {
+      display: flex;
+      float: right;
+      padding: 16px;
+      color: #000; }
+      .header__buttons li {
+        display: block;
+        margin: 0 8px;
+        padding: 8px 16px; } }
+    @media (min-width: 961px) and (min-width: 561px) {
+      .header__buttons li {
+        border: 1px #000 solid;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px; } }
+
+  @media (max-width: 960px) {
+    .header__buttons {
+      display: none; } }
   .header__titlebox {
     position: absolute;
     top: 0;
@@ -433,5 +434,118 @@ p {
     color: #2F5480;
     font-size: 24px;
     font-size: 1.5rem; }
+
+#checkbox {
+  display: none; }
+
+@media (min-width: 961px) {
+  .humburger-menu {
+    display: none; } }
+@media (max-width: 960px) {
+  .humburger-icon {
+    position: fixed;
+    top: 24px;
+    left: 16px;
+    z-index: 3; }
+    .humburger-icon .bar {
+      display: block;
+      background-color: #fff;
+      width: 30px;
+      height: 3px;
+      margin: 5px auto; }
+    .humburger-icon .top, .humburger-icon .bottom {
+      -moz-transform: rotateZ(0deg);
+      -ms-transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+      transform: rotateZ(0deg);
+      -moz-transition: background-color 1s linear;
+      -o-transition: background-color 1s linear;
+      -webkit-transition: background-color 1s linear;
+      transition: background-color 1s linear; }
+    .humburger-icon .middle {
+      -moz-transition: width 1s linear;
+      -o-transition: width 1s linear;
+      -webkit-transition: width 1s linear;
+      transition: width 1s linear; }
+
+  .humburger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    padding-bottom: 0;
+    background-color: #FCC345;
+    z-index: 2;
+    color: #fff;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    -moz-transition: width 1s linear, height 1s linear, opacity 1s linear;
+    -o-transition: width 1s linear, height 1s linear, opacity 1s linear;
+    -webkit-transition: width 1s linear, height 1s linear, opacity 1s linear;
+    transition: width 1s linear, height 1s linear, opacity 1s linear; }
+    .humburger-menu__lists {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0; } }
+    @media (max-width: 960px) and (max-width: 560px) {
+      .humburger-menu__lists {
+        margin: 80px 0 0 16px; } }
+    @media (max-width: 960px) and (min-width: 561px) and (max-width: 960px) {
+      .humburger-menu__lists {
+        margin: 32px 48px 0;
+        text-align: center; } }
+@media (max-width: 960px) {
+      .humburger-menu__lists li {
+        margin-bottom: 16px; }
+
+  .wrapper {
+    position: relative; }
+
+  .header, .main, .footer {
+    z-index: 1; } }
+input[type="checkbox"]:checked ~ .humburger-menu {
+  -moz-transition: width 1s linear, height 1s linear, opacity 1s linear;
+  -o-transition: width 1s linear, height 1s linear, opacity 1s linear;
+  -webkit-transition: width 1s linear, height 1s linear, opacity 1s linear;
+  transition: width 1s linear, height 1s linear, opacity 1s linear;
+  width: 100vw;
+  height: 200px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1; }
+
+input[type="checkbox"]:checked ~ label .top {
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+  -moz-transition: -moz-transform 1s linear;
+  -o-transition: -o-transform 1s linear;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: transform 1s linear; }
+
+input[type="checkbox"]:checked ~ label .bottom {
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transition: -moz-transform 1s linear;
+  -o-transition: -o-transform 1s linear;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: transform 1s linear; }
+
+input[type="checkbox"]:checked ~ label .middle {
+  width: 0;
+  -moz-transition: width 0.5s linear;
+  -o-transition: width 0.5s linear;
+  -webkit-transition: width 0.5s linear;
+  transition: width 0.5s linear; }
+
+input[type="checkbox"]:checked ~ .humburger-menu ul {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in; }
 
 /*# sourceMappingURL=style.css.map */
