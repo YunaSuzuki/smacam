@@ -28,7 +28,7 @@ p{
 
 .deco-text{
   color: $blue;
-  font-family: YuGothic,'Yu Gothic','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+  font-family: $text-font;
   font-weight: bold;
   @include fontsize(24);
 }
@@ -77,6 +77,8 @@ p{
       float: right;
       padding: 16px;
       color: #000;
+      font-family: $text-font;
+      font-weight: 500;
       
       li{
         display: block;
@@ -275,7 +277,7 @@ p{
   position: relative;
   padding: 40px 16px;
   background-color: #FFFBF2;
-  font-family: $contents_font;
+  font-family: $text_font;
   color: $text-color;
   
   @media #{$more-than-tb}{
@@ -640,6 +642,8 @@ p{
     background-color: #FCC345;
     z-index: 2;
     color: #fff;
+    font-family: $text-font;
+    font-weight: 600;
     @include opacity(0);
     @include transition(width 1s linear, height 1s linear, opacity 1s linear);
     
