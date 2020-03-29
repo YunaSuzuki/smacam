@@ -458,6 +458,10 @@ p{
     display: flex;
     justify-content: space-between;
     margin: auto;
+    
+    li:hover{
+      text-decoration: underline;
+    }
   }
   
   @media #{$sp-size}{
@@ -528,6 +532,10 @@ p{
       }
     }
   }
+}
+
+.section__block__textbox{
+  @include fontsize(16);
 }
 
 .register{
