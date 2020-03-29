@@ -1,40 +1,42 @@
 /*
-Error: File to import not found or unreadable: compass.
-        on line 1 of /home/ec2-user/environment/smacam/sass/style.scss
+Error: Invalid CSS after "    color: ": expected expression (e.g. 1px, bold), was ";"
+        on line 584 of /home/ec2-user/environment/smacam/sass/style.scss
 
-1: @import 'compass';
-2: @import 'modules/variables.scss';
-3: @import 'modules/mixin.scss';
-4: 
-5: *{
-6:   box-sizing: border-box;
+579:     @include border-radius(5px);
+580:   }
+581:   
+582:   .downicon-block{
+583:     text-align: center;
+584:     color: ;
+585:   }
+586:   
+587: }
 
 Backtrace:
-/home/ec2-user/environment/smacam/sass/style.scss:1
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/import_node.rb:37:in `css_import?'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/ec2-user/environment/smacam/sass/style.scss:584
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/script/lexer.rb:229:in `expected!'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/script/parser.rb:710:in `assert_expr'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/script/parser.rb:75:in `parse'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:1063:in `sass_script'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:909:in `value!'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:778:in `block in try_declaration'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:1183:in `rethrow'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:791:in `try_declaration'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
 /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
 /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
 /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
@@ -55,4 +57,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass.\A         on line 1 of /home/ec2-user/environment/smacam/sass/style.scss\A \A 1: @import 'compass';\A 2: @import 'modules/variables.scss';\A 3: @import 'modules/mixin.scss';\A 4: \A 5: *{\A 6:   box-sizing: border-box;"; }
+  content: "Error: Invalid CSS after \"    color: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 584 of /home/ec2-user/environment/smacam/sass/style.scss\A \A 579:     @include border-radius(5px);\A 580:   }\A 581:   \A 582:   .downicon-block{\A 583:     text-align: center;\A 584:     color: ;\A 585:   }\A 586:   \A 587: }"; }
