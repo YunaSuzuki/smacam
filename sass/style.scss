@@ -50,18 +50,17 @@ p{
 }
 
 #smacam-title-image{
+  top: 16px;
+  left: 16px;
+  position: fixed;
+  z-index: 30;
+  
   @media #{$pc-size}{
     width: 150px;
-    margin: 16px 0 0 16px;
   }
   
   @media #{$less-than-tb}{
-    display: inline-block;
     width: 100px;
-    top: 16px;
-    left: 16px;
-    position: fixed;
-    z-index: 30;
   }
 }
 

@@ -35,18 +35,17 @@ p {
 #student-marker {
   background: linear-gradient(rgba(0, 0, 0, 0) 65%, #06c8b6 65%); }
 
-@media (min-width: 961px) {
-  #smacam-title-image {
-    width: 150px;
-    margin: 16px 0 0 16px; } }
-@media (max-width: 960px) {
-  #smacam-title-image {
-    display: inline-block;
-    width: 100px;
-    top: 16px;
-    left: 16px;
-    position: fixed;
-    z-index: 30; } }
+#smacam-title-image {
+  top: 16px;
+  left: 16px;
+  position: fixed;
+  z-index: 30; }
+  @media (min-width: 961px) {
+    #smacam-title-image {
+      width: 150px; } }
+  @media (max-width: 960px) {
+    #smacam-title-image {
+      width: 100px; } }
 
 .header {
   position: relative;
