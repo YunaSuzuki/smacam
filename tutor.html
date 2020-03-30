@@ -10,31 +10,41 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
   <body>
+    <img src="images/smacam-header.png" class="pc-view" id="smacam-title-image" alt="smacam">
     <header class="header">
-      <div class="clearfix">
-        <ul class="header__buttons pc-view">
-          <li>新規登録</li>
-          <li>ログイン</li>
-        </ul>
-        <div class="header__buttons sp-view">
-          <i class="fas fa-bars" id="humburger-icon"></i>
+        <div class="clearfix">
+          <ul class="header__buttons pc-view">
+            <li>新規登録</li>
+            <li>ログイン</li>
+          </ul>
         </div>
-      </div>
-      <div class="header__titlebox">
-        <div class="header__titlebox__inner">
-          <div class="topleft-box textbox">
-            <span>教えたい</span>
-          </div>
-          <div class="rightbottom-box textbox">
-            <span>学びたい</span>
-          </div>
-          <div class="center-mark">
-            <span id="falling-right"></span>
-            <span id="rising-right"></span>
+        <div class="header__titlebox">
+          <div class="header__titlebox__inner">
+            <div class="topleft-box textbox">
+              <span>教えたい</span>
+            </div>
+            <div class="rightbottom-box textbox">
+              <span>学びたい</span>
+            </div>
+            <div class="center-mark">
+              <span id="falling-right"></span>
+              <span id="rising-right"></span>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    <input type="checkbox" id="checkbox"/>
+    <label for="checkbox" class="humburger-icon">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </label>
+    <div class="humburger-menu">
+      <ul class="humburger-menu__lists">
+        <li>新規登録</li>
+        <li>ログイン</li>
+      </ul>
+    </div>
     <main>
       <div class="main-wrapper">
         <section class="about">

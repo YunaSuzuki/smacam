@@ -49,6 +49,22 @@ p{
   background: linear-gradient(transparent 65%, #06C8B6 65%);
 }
 
+#smacam-title-image{
+  @media #{$pc-size}{
+    width: 150px;
+    margin: 16px 0 0 16px;
+  }
+  
+  @media #{$less-than-tb}{
+    display: inline-block;
+    width: 100px;
+    top: 16px;
+    left: 16px;
+    position: fixed;
+    z-index: 30;
+  }
+}
+
 //header
 .header{
   position: relative;
@@ -75,20 +91,14 @@ p{
     @media #{$pc-size}{
       display: flex;
       float: right;
-      padding: 16px;
+      padding: 24px;
       color: #000;
       font-family: $text-font;
       font-weight: 500;
       
       li{
         display: block;
-        margin: 0 8px;
-        padding: 8px 16px;
-        
-        @media #{$more-than-tb}{
-          border: 1px #000 solid;
-          @include border-radius(4px);
-        }
+        margin: 0 16px;
       }
     }
     
@@ -107,13 +117,13 @@ p{
     margin: auto;
     
     @media #{$sp-size}{
-      width: 70%;
-      height: 45%;
+      width: 55%;
+      height: 35%;
     }
     
     @media #{$more-than-tb}{
       width: 55%;
-      height: 50%;
+      height: 40%;
     }
     
     &__inner{
@@ -129,32 +139,31 @@ p{
     text-align: center;
     
     @media #{$sp-size}{
-      @include fontsize(18);
+      @include fontsize(16);
     }
     
     @media #{$more-than-tb}{
-      @include fontsize(32);
+      @include fontsize(24);
     }
     
     span{
       margin: 0 16px;
       @media #{$sp-size}{
-        line-height: 66px;
+        line-height: 47px;
       }
       
       @media #{$more-than-tb}{
-        line-height: 110px;
+        line-height: 88px;
       }
     }
   }
   
   .topleft-box{
-    width: 55%;
     height: 55%;
     line-height: 200%;
     
     @media #{$sp-size}{
-      width: 70%;
+      width: 60%;
     }
     
     @media #{$more-than-tb}{
@@ -171,7 +180,7 @@ p{
     line-height: 200%;
     
     @media #{$sp-size}{
-      width: 70%;
+      width: 60%;
     }
     
     @media #{$more-than-tb}{
@@ -611,12 +620,12 @@ p{
   .humburger-icon{
     position: fixed;
     top: 24px;
-    left: 16px;
-    z-index: 3;
+    right: 16px;
+    z-index: 30;
     
     .bar{
       display: block;
-      background-color: #fff;
+      background-color: #182C98;
       width: 30px;
       height: 3px;
       margin: 5px auto;
@@ -624,7 +633,7 @@ p{
     
     .top, .bottom{
       @include transform(rotateZ(0deg));
-      @include transition(background-color 1s linear);
+      @include transition(transform 1s linear, background-color 1s ease-in);
     }
     
     .middle{
@@ -635,12 +644,12 @@ p{
   .humburger-menu{
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 0;
     height: 0;
     padding-bottom: 0;
     background-color: #FCC345;
-    z-index: 2;
+    z-index: 20;
     color: #fff;
     font-family: $text-font;
     font-weight: 600;
@@ -683,12 +692,14 @@ input[type="checkbox"]:checked ~ .humburger-menu{
 }
 
 input[type="checkbox"]:checked ~ label .top{
+  background-color: #fff;
   @include transform(rotateZ(45deg));
-  @include transition(transform 1s linear);
+  @include transition(transform 1s linear, background-color 1s ease-in);
 }
 input[type="checkbox"]:checked ~ label .bottom{
+  background-color: #fff;
   @include transform(translateY(-15px) rotateZ(-45deg));
-  @include transition(transform 1s linear);
+  @include transition(transform 1s linear, background-color 1s ease-in);
 }
 
 input[type="checkbox"]:checked ~ label .middle{
