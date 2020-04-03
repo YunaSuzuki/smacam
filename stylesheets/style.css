@@ -15,12 +15,21 @@ p {
   content: '';
   clear: both; }
 
-.deco-text {
+.title-text {
+  margin-right: 8px;
   color: #182C98;
   font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", YuGothic, "Yu Gothic", sans-serif;
   font-weight: bold;
   font-size: 24px;
   font-size: 1.5rem; }
+
+.title-text-en {
+  color: #000;
+  font-family: "Yellowtail", cursive;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 32px;
+  font-size: 2rem; }
 
 .bold-text {
   font-weight: bold; }
