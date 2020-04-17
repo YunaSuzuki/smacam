@@ -44,17 +44,30 @@ p {
 #student-marker {
   background: linear-gradient(rgba(0, 0, 0, 0) 65%, #06c8b6 65%); }
 
-#smacam-title-image {
+.top-title {
   top: 16px;
   left: 16px;
   position: fixed;
   z-index: 30; }
-  @media (min-width: 961px) {
-    #smacam-title-image {
-      width: 150px; } }
-  @media (max-width: 960px) {
-    #smacam-title-image {
-      width: 100px; } }
+  @media (min-width: 561px) {
+    .top-title {
+      width: 250px;
+      font-size: 40px;
+      font-size: 2.5rem; } }
+  @media (max-width: 560px) {
+    .top-title {
+      width: 100px;
+      font-size: 26px;
+      font-size: 1.625rem; } }
+
+@media (min-width: 561px) {
+  .top-title-en {
+    font-size: 48px;
+    font-size: 3rem; } }
+@media (max-width: 560px) {
+  .top-title-en {
+    font-size: 26px;
+    font-size: 1.625rem; } }
 
 .header {
   position: relative;

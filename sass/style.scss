@@ -26,6 +26,7 @@ p{
   clear: both;
 }
 
+
 .title-text{
   margin-right: 8px;
   color: $blue;
@@ -58,18 +59,30 @@ p{
   background: linear-gradient(transparent 65%, #06C8B6 65%);
 }
 
-#smacam-title-image{
+.top-title{
   top: 16px;
   left: 16px;
   position: fixed;
   z-index: 30;
   
-  @media #{$pc-size}{
-    width: 150px;
+  @media #{$more-than-tb}{
+    width: 250px;
+    @include fontsize(40);
   }
   
-  @media #{$less-than-tb}{
+  @media #{$sp-size}{
     width: 100px;
+    @include fontsize(26);
+  }
+}
+
+.top-title-en{
+  @media #{$more-than-tb}{
+    @include fontsize(48);
+  }
+  
+  @media #{$sp-size}{
+    @include fontsize(26);
   }
 }
 
