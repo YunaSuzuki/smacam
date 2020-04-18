@@ -579,4 +579,7 @@ input[type="checkbox"]:checked ~ .humburger-menu ul {
   -webkit-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in; }
 
+.link-contents {
+  cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */

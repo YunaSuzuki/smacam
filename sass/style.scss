@@ -732,3 +732,8 @@ input[type="checkbox"]:checked ~ .humburger-menu ul{
   @include opacity(1);
   @include transition(opacity 1s ease-in);
 }
+
+
+.link-contents{
+  cursor: pointer;
+}
