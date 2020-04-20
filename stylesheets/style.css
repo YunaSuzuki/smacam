@@ -56,18 +56,20 @@ p {
       font-size: 2.5rem; } }
   @media (max-width: 560px) {
     .top-title {
-      width: 100px;
+      width: 200px;
       font-size: 26px;
       font-size: 1.625rem; } }
 
-@media (min-width: 561px) {
-  .top-title-en {
-    font-size: 48px;
-    font-size: 3rem; } }
-@media (max-width: 560px) {
-  .top-title-en {
-    font-size: 26px;
-    font-size: 1.625rem; } }
+.top-title-en {
+  font-family: "Yellowtail", cursive; }
+  @media (min-width: 561px) {
+    .top-title-en {
+      font-size: 48px;
+      font-size: 3rem; } }
+  @media (max-width: 560px) {
+    .top-title-en {
+      font-size: 26px;
+      font-size: 1.625rem; } }
 
 .header {
   position: relative;

@@ -71,12 +71,13 @@ p{
   }
   
   @media #{$sp-size}{
-    width: 100px;
+    width: 200px;
     @include fontsize(26);
   }
 }
 
 .top-title-en{
+  font-family: $title_en_font;
   @media #{$more-than-tb}{
     @include fontsize(48);
   }
